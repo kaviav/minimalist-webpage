@@ -24,3 +24,25 @@ const closeModal = function () {
 btnsOpenModal.forEach((btn) => btn.addEventListener("click", openModal));
 btncloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
+
+document.addEventListener("keyDown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+});
+
+btnScrollTo.addEventListener("click", function (e) {
+  const s1coords = section1.getBoundingClientReact();
+  console.log(s1coords);
+
+  console.log(e.target.getBoundingClientReact());
+  console.log("Current scrol (X/Y)", window.pageXOffset, window.pageXOffset);
+
+  console.log(
+    "height/width viewport",
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+
+  section1.scrollIntoView({ behavior: "smooth" });
+});
