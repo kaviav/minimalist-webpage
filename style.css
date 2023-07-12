@@ -203,3 +203,21 @@ h4 {
   transform: scale(1.07, 1.05) skewX(-15deg);
   background-image: var(--gradient-primary);
 }
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin: 0 12rem;
+}
+
+.features__img {
+  width: 100%;
+}
+
+.features__feature {
+  align-self: center;
+  justify-self: center;
+  width: 70%;
+  font-size: 1.5rem;
+}
