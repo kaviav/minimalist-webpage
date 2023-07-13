@@ -274,3 +274,16 @@ h4 {
 .operations__tab--1:hover {
   background-color: var(--color-secondary-darker);
 }
+
+.operations__tab--3 {
+  background-color: var(--color-tertiary);
+  margin: 0;
+}
+
+.operations__tab--3:hover {
+  background-color: var(--color-tertiary-darker);
+}
+
+.operations__tab--active {
+  transform: translateY(-66%);
+}
