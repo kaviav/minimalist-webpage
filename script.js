@@ -144,3 +144,14 @@ const imgObserver = new IntersectionObserver(loadImg, {
   threshold: 0,
   rootMargin: "200px",
 });
+
+imgTargets.forEach((img) => imgObserver.observe(img));
+
+const slider = function () {
+  const slides = document.querySelectorAll(".slide");
+  const btnLeft = document.querySelector(".slider__btn--left");
+  const btnRight = document.querySelector(".slider__btn--right");
+  const dotContainer = document.querySelector(".dots");
+
+  let curSlide = 0;
+  const maxSlide = slides.length;
