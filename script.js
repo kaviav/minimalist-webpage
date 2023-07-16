@@ -155,3 +155,11 @@ const slider = function () {
 
   let curSlide = 0;
   const maxSlide = slides.length;
+  const createDots = function () {
+    slides.forEach(function (_, i) {
+      dotContainer.insertAdjacentHTML(
+        "beforeend",
+        `<button class="dots__dot" data-slide="${i}"></button>`
+      );
+    });
+  };
