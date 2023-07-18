@@ -173,3 +173,9 @@ const slider = function () {
       .querySelector(`.dots__dot[data-slide="${slide}"]`)
       .classList.add("dots__dot--active");
   };
+
+  const goToSlide = function (slide) {
+    slides.forEach(
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+  };
