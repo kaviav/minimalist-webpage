@@ -179,3 +179,11 @@ const slider = function () {
       (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
     );
   };
+
+  const nextSlide = function () {
+    if (curSlide === maxSlide - 1) {
+      curSlide = 0;
+    } else {
+      curSlide++;
+    }
+  
