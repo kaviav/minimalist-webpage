@@ -201,7 +201,7 @@ const slider = function () {
     goToSlide(curSlide);
     activateDot(curSlide);
   };
-  
+
   const init = function () {
     goToSlide(0);
     createDots();
@@ -213,8 +213,17 @@ const slider = function () {
   btnRight.addEventListener("click", nextSlide);
   btnLeft.addEventListener("click", prevSlide);
 
-
   document.addEventListener("keyDown", function (e) {
     if (e.key === "ArrowLeft") prevSlide();
     e.key === "ArrowRight" && nextSlide();
   });
+
+  dotContainer.addEventListener("click", function (e) {
+    if (e.target.classList.contains("dots__dot")) {
+      const { slide } = e.target.dataset;
+      goToSlide(slide);
+      activateDot(slide);
+    }
+  });
+};
+slider();
