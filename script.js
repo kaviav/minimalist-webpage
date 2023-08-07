@@ -32,10 +32,10 @@ document.addEventListener("keyDown", function (e) {
 });
 
 btnScrollTo.addEventListener("click", function (e) {
-  const s1coords = section1.getBoundingClientReact();
+  const s1coords = section1.getBoundingClientRect();
   console.log(s1coords);
 
-  console.log(e.target.getBoundingClientReact());
+  console.log(e.target.getBoundingClientRect());
   console.log("Current scrol (X/Y)", window.pageXOffset, window.pageXOffset);
 
   console.log(
